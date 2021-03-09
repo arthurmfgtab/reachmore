@@ -30,4 +30,5 @@ const GlobalStyle = createGlobalStyle`
         color: ${Colors.DARK};
     }
 `
+
 export default GlobalStyle

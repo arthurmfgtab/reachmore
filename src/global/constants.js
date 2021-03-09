@@ -1,7 +1,6 @@
 export const Text = {
     LANDING_PAGE: {
-        TITLE:
-            'Build your own online store, style it and make your dreams come true.',
+        TITLE: 'Build your own online store, style it and make your dreams come true.',
         DESCRIPTION:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam assumenda ea quo cupiditate facere deleniti fuga officia.',
         BUTTON: 'Get Started',
@@ -15,6 +14,7 @@ export const Colors = {
     GREEN: '#28a745',
     WHITE: '#fff',
     GRAY: '#6c757d',
+    LIGHT_GRAY: '#CCC',
     GRAYDARK: '#343a40',
     PRIMARY: '#007bff',
     SECONDARY: '#6c757d',
@@ -23,6 +23,7 @@ export const Colors = {
     WARNING: '#ffc107',
     DANGER: '#dc3545',
     LIGHT: '#f8f9fa',
+    ICE_LIGHT: '#f5f5f5',
     DARK: '#343a40',
     DARK2: '#3b3950',
 }
