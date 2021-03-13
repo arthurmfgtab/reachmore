@@ -43,34 +43,34 @@ export const Header = styled.div`
 `
 
 export const Content = styled.div`
+    display: flex;
     flex: 6;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 1rem;
+    flex-direction: column;
+    padding: 2rem;
+    width: 100%;
 
-    form {
-        display: flex;
-        flex-direction: column;
+    #field {
+        width: 100%;
+    }
 
-        label {
-            font-size: 1rem;
-            margin-bottom: 0.3rem;
-        }
+    label {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
 
-        input {
-            border: 0.13rem solid #ddd;
-            border-radius: 0.4rem;
-            height: 2.6rem;
-            padding: 0.6rem;
-            font-size: 0.9rem;
+    input {
+        border: 0.12rem solid #ccc;
+        border-radius: 0.4rem;
+        height: 2.6rem;
+        width: 100%;
+        padding: 0.6rem;
+        font-size: 0.9rem;
+        margin-bottom: 1.3rem;
 
-            &:first-of-type {
-                margin-bottom: 1rem;
-            }
-
-            &:nth-of-type(2) {
-                margin-bottom: 2rem;
-            }
+        &:last-of-type {
+            margin-bottom: 2rem;
         }
     }
 `

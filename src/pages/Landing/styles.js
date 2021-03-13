@@ -7,25 +7,18 @@ export const Container = styled.div`
     flex-direction: column;
     background-color: ${Colors.LIGHT};
     color: #4d4d4f;
+    font-family: 'Varela Round', sans-serif;
 `
 
 export const Header = styled.div`
-    height: 50px;
+    min-height: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 8px;
+    padding: 0 0.8rem;
     background-color: ${Colors.ICE_LIGHT};
-    box-shadow: 0 1px 12px ${Colors.LIGHT_GRAY};
-
-    ul {
-        display: none;
-
-        li:not(:first-child) {
-            margin-left: 1rem;
-        }
-    }
+    box-shadow: 0 0.1rem 0.12rem ${Colors.LIGHT_GRAY};
 
     div {
         display: flex;
@@ -35,6 +28,10 @@ export const Header = styled.div`
         i {
             margin-left: 0.8rem;
         }
+    }
+
+    * {
+        cursor: pointer;
     }
 `
 
@@ -77,7 +74,6 @@ export const Content = styled.div`
         margin-top: 2rem;
         font-size: 1.6rem;
         line-height: 1.6rem;
-        font-family: 'Varela Round', sans-serif;
     }
 
     h4 {
@@ -87,8 +83,4 @@ export const Content = styled.div`
         font-size: 1rem;
         color: #767676;
     }
-`
-
-export const Logo = styled.div`
-    cursor: pointer;
 `

@@ -1,4 +1,4 @@
-export const TOKEN_KEY = '@reachmore-Token'
+export const TOKEN_KEY = 'TOKEN_KEY'
 
 export const isAuthenticated = () => localStorage.getItem(TOKEN_KEY) !== null
 
