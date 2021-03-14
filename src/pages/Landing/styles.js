@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Colors } from './../../global/constants'
+import { Colors, Breakpoints } from './../../global/constants'
 
 export const Container = styled.div`
     height: 100vh;
@@ -20,6 +20,33 @@ export const Header = styled.div`
     background-color: ${Colors.ICE_LIGHT};
     box-shadow: 0 0.1rem 0.12rem ${Colors.LIGHT_GRAY};
 
+    .logo {
+        transform: scale(1.12);
+        padding: 0.18rem;
+        border: 0.1rem solid ${Colors.INTENSE_BLUE};
+        border-radius: 0.2rem;
+    }
+
+    .right-side-content {
+        div {
+            display: none;
+        }
+
+        @media (min-width: ${Breakpoints.LG}) {
+            div {
+                display: flex;
+            }
+            i,
+            span {
+                display: none;
+            }
+        }
+    }
+
+    * {
+        cursor: pointer;
+    }
+
     div {
         display: flex;
         flex-direction: row;
@@ -30,8 +57,30 @@ export const Header = styled.div`
         }
     }
 
-    * {
-        cursor: pointer;
+    ul {
+        display: none;
+
+        a {
+            position: relative;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+
+            &:hover {
+                transform: scale(1.12);
+                transition: 0.1s ease-in-out;
+                padding: 0.18rem;
+                border: 0.1rem solid ${Colors.INTENSE_BLUE};
+                border-radius: 0.2rem;
+            }
+        }
+
+        @media (min-width: ${Breakpoints.LG}) {
+            display: flex;
+            width: 60%;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
     }
 `
 
@@ -41,7 +90,12 @@ export const ResponsiveNav = styled.div`
     text-transform: uppercase;
     display: ${props => (props.isOpen ? 'flex' : 'none')};
 
-    li {
+    ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    a {
         cursor: pointer;
         position: relative;
 
@@ -63,6 +117,33 @@ export const ResponsiveNav = styled.div`
             left: -0.1rem;
             top: 1.4rem;
         }
+    }
+
+    @media (min-width: ${Breakpoints.SM}) {
+        ul {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-around;
+
+            a::after {
+                width: 2rem;
+            }
+        }
+    }
+
+    @media (min-width: ${Breakpoints.MD}) {
+        ul {
+            justify-content: flex-end;
+
+            a:not(:first-of-type) {
+                margin-left: 3rem;
+            }
+        }
+    }
+
+    @media (min-width: ${Breakpoints.LG}) {
+        display: none;
     }
 `
 

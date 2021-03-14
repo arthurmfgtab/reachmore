@@ -1,8 +1,11 @@
 import React from 'react'
 import Button from './styles'
 
-export default props => (
-    <Button block={props.block} onClick={props.onClick}>
-        {props.label}
-    </Button>
-)
+export default props => {
+    const { dataCy, width, block, onClick, label } = props
+    return (
+        <Button data-cy={dataCy} width={width} block={block} onClick={onClick}>
+            {label}
+        </Button>
+    )
+}

@@ -1,0 +1,25 @@
+{
+    "projectId": "u1511d",
+    "viewportHeight": 800,
+    "viewportWidth": 1000,
+    "watchForFileChanges": false,
+    "retries": { "runMode": 2, "openMode": 0 },
+    "env": {
+        "api": {
+            "dev": {
+                "baseUrl": "http://127.0.0.1:4000"
+            },
+            "prod": {
+                "baseUrl": ""
+            }
+        },
+        "client": {
+            "dev": {
+                "baseUrl": "http://127.0.0.1:3000"
+            },
+            "prod": {
+                "baseUrl": ""
+            }
+        }
+    }
+}

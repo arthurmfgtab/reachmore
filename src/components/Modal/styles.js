@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Breakpoints, Colors } from './../../global/constants'
 
 export const Wrapper = styled.div`
     display: ${props => (props.isOpen ? 'block' : 'none')};
@@ -20,6 +21,10 @@ export const Modal = styled.div`
     height: 75%;
     display: flex;
     flex-direction: column;
+
+    @media (min-width: ${Breakpoints.SM}) {
+        width: 30rem;
+    }
 `
 
 export const Header = styled.div`
@@ -53,6 +58,20 @@ export const Content = styled.div`
 
     #field {
         width: 100%;
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 100%;
+            padding: 0 0 0.3rem 1rem;
+
+            span {
+                font-size: 13px;
+                margin-top: 0.4rem;
+                color: orangered;
+            }
+        }
     }
 
     label {
@@ -86,4 +105,10 @@ export const Footer = styled.div`
     * {
         margin-right: 0.7rem;
     }
+`
+
+export const FeedbackMessage = styled.div`
+    color: ${props => (props.requestError ? 'orangered' : Colors.INTENSE_BLUE)};
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
 `
